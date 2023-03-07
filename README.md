@@ -36,7 +36,7 @@ We can run promotions to get people to claim the first x users on the platform.
 
 - Size and scale:
     My identicons are currently 10x10 squares, 240x240 pixels.  This could be configured for a variety of different looks (most likely based on our count)
-    .  But here's my recommendations based on experience: all identicons are the same size / shape.  Outside of that we can get creative, but keep them the same
+    .  My recommenation based on ux experience is: all identicons are the same size / shape.  Outside of that we can get creative, but keep them the same
     size overall so our page looks consistent.
     
     
