@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b41913efcedce8c970f2ab2557998c5d609dd853c3ecfc8b900e287b28569529"
+            "sha256": "8a419cc8be34f67c9bba8e64c4da4a0084a5e06483d3a2a8d68a85ee67bc6601"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,10 +23,6 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==8.1.3"
-        },
-        "identicli": {
-            "editable": true,
-            "path": "."
         },
         "pillow": {
             "hashes": [

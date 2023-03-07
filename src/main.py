@@ -1,13 +1,19 @@
+from typing import Optional
+
 import typer
 
 from identicon_service import IdenticonService
 
+app = typer.Typer()
 
-def main(username: str):
-    service = IdenticonService()
+
+@app.command()
+def create_identicon(username: str, filepath: Optional[str] = typer.Argument('identicons')):
+    service = IdenticonService.load()
     identicon = service.create_user_identicon(username)
-    service.write_identicon_to_file(username, identicon)
+    service.write_identicon_to_file(username, identicon, filepath)
+    service.save()
 
 
 if __name__ == "__main__":
-    typer.run(main)
+    app()
