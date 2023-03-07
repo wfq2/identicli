@@ -6,7 +6,7 @@ I recommend using pycharm to code here.
 
 # Given an arbitrary string, create an image that can serve as a unique identifier for a user of a B2B productivity app like slack, notion, etc.
 
-**Requirements**
+**Existing Requirements**
 
 - Define a set of objectives to accomplish with your *identicon.* There's no right or wrong answer here. Here are some hypothetical objectives:
     - Legibility at some scale or set of scales - what sizes should the icon be shown at?
@@ -23,9 +23,14 @@ decently well, and can be swapped out fairly easily.
 ***What string do I create the identicon with?***
 
 We have two options here, going deterministic or non-deterministic.  Overall for a web application it's going to be easier
-for a non-deterministic option.  Why?  Users might not like their identicons, and can re assign them.  We can make beautiful identicons  
-and assign them to any string.  We can decide how similar identicons are based on the string / what assigns them.  Here are my rules:
+for a non-deterministic option.  Why?  Users might not like their identicons, and we can re assign them.  We can make beautiful identicons  
+and assign them to any user name.  We can decide how similar identicons are based on the string / what assigns them.  Here are my rules:
 
 - Identicons are similar based on the order they are created.  People love being the first on a platform, so my string that I pass into
 the library is the count of users created.  We can modify this in the future to have only the first 1k users get a black and white identicon.
-What if 
+We can run promotions to get people to claim the first x users on the platform.
+
+- Size and scale:
+    My identicons are currently 10x10 squares, 240x240 pixels.  This could be configured for a variety of different looks (most likely based on our count)
+    .  But here's my recommendations based on experience: all identicons are the same size / shape.  Outside of that we can get creative, but keep them the same
+    size overall so our page looks consistent.
