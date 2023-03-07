@@ -1,8 +1,10 @@
-# identic-cli
+# identi-cli
 
 This repository uses:
 Pipenv for dependency management, python 3.9.11  
 I recommend using pycharm to code here.
+
+**Problem Statement**
 
 ****Given an arbitrary string, create an image that can serve as a unique identifier for a user of a B2B productivity app like slack, notion, etc.****
 
@@ -44,3 +46,11 @@ Its configured as a cli.  Start by installing python, and the required dependenc
 To add a new user just run:
 `python src/main.py '{username}'`  
 that will add another image to your identicons folder.  State will also be updated in your local state file.
+
+***Developing***
+
+Use the right version of python: (3.9.11)
+I use asdf - https://github.com/asdf-community/asdf-python
+
+Use pipenv to manage your python environment for this repository:
+https://pipenv.pypa.io/en/latest/install/
