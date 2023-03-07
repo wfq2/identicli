@@ -4,7 +4,7 @@ This repository uses:
 Pipenv for dependency management, python 3.9.11  
 I recommend using pycharm to code here.
 
-# Given an arbitrary string, create an image that can serve as a unique identifier for a user of a B2B productivity app like slack, notion, etc.
+****Given an arbitrary string, create an image that can serve as a unique identifier for a user of a B2B productivity app like slack, notion, etc.****
 
 **Existing Requirements**
 
@@ -18,7 +18,9 @@ I recommend using pycharm to code here.
 
 **Initial thoughts**  
 Use a language I know (python), and re-use a library to create an identicon.  I found pydenticon as this library, it works
-decently well, and can be swapped out fairly easily.
+decently well, and can be swapped out fairly easily.  I made it a cli because it was an easy way to test the program.  In reality
+this would be an api with a database, but for now we have a cli that creates identicons in the identicon folder.  I pre-populated the
+users with the towns near me on my vacation.
 
 ***What string do I create the identicon with?***
 
@@ -34,3 +36,11 @@ We can run promotions to get people to claim the first x users on the platform.
     My identicons are currently 10x10 squares, 240x240 pixels.  This could be configured for a variety of different looks (most likely based on our count)
     .  But here's my recommendations based on experience: all identicons are the same size / shape.  Outside of that we can get creative, but keep them the same
     size overall so our page looks consistent.
+    
+    
+***Using The Program***
+
+Its configured as a cli.  Start by installing python, and the required dependencies (I recommend just using pipenv & asdf for the python version).
+To add a new user just run:
+`python src/main.py '{username}'`  
+that will add another image to your identicons folder.  State will also be updated in your local state file.
